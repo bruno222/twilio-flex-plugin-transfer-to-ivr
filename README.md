@@ -22,20 +22,21 @@ This is a [Flex Plugin](https://www.twilio.com/docs/flex/developer/plugins) that
 
 ## How to install
 
-We have to install 2 assets:
+You have to work on 3 things, don't get scared of, they are quick steps:
 
-- The Twilio Functions (back-end)
-- The Flex Plugin (front-end)
+- Step 1 - Create a new Twilio Function
+- Step 2 - Create a new StudioFlow
+- Step 3 - Install the Flex Plugin
 
-#### To install the Function
+#### Step 1 - Create a new Twilio Function
 
-TODO (but for now: create a Public Function copying the script from ./docs/function-send-to-flex-and-back-to-studio.js)
+1. TODO - but for now: create a Public Function copying the script from ./docs/function-send-to-flex-and-back-to-studio.js)
 
-#### How to use Studio together with the Function:
+#### Step 2 - Create a new StudioFlow
 
-TODO (but for now: copy from ./docs/studio-flow-json.js and change the URL of the widget "Redirect TwiML")
+1. TODO (but for now: copy from ./docs/studio-flow-json.js and change the URL of the widget "Redirect TwiML")
 
-#### To install the Plugin:
+#### Step 3 - Install the Flex Plugin
 
 1. clone this repo;
 2. `npm install` to install the packages into your computer.
