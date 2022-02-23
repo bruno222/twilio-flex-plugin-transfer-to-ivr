@@ -16,9 +16,9 @@ This is a [Flex Plugin](https://www.twilio.com/docs/flex/developer/plugins) that
 
 The main use-case is this one:
 
-Customer calls but presses the wrong options on the IVR and ends up talking with the wrong Agent..
+Customer calls in but presses the wrong options on the IVR and ends up talking with the wrong Agent...
 
-Instead of having the Agent saying "oh we are not sales, we are services, call us again please", the Agent can help this customer and forward him/her back to the exact menu in the IVR the customer wants to go to, avoiding having the customer to listen all your IVR flow once again.
+Instead of having the Agent say "oh we are not sales, we are services, call us again please", the Agent can help this customer and forward him/her back to the exact menu in the IVR the customer wants to go to, avoiding having the customer to listen to all your IVR flow once again.
 
 ## How to install
 
