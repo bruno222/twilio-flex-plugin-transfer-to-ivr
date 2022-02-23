@@ -14,11 +14,11 @@ This is a [Flex Plugin](https://www.twilio.com/docs/flex/developer/plugins) that
 
 ## Why?
 
-    The main use-case is this one:
+The main use-case is this one:
 
-    Customer calls but presses the wrong options on the IVR and ends up talking with the wrong Agent..
+Customer calls but presses the wrong options on the IVR and ends up talking with the wrong Agent..
 
-    Instead of having the Agent saying "oh we are not sales, we are services, call us again please", the Agent can help this customer and forward him/her back to the exact menu in the IVR the customer wants to go to, avoiding having the customer to listen all your IVR flow once again.
+Instead of having the Agent saying "oh we are not sales, we are services, call us again please", the Agent can help this customer and forward him/her back to the exact menu in the IVR the customer wants to go to, avoiding having the customer to listen all your IVR flow once again.
 
 ## How to install
 
@@ -46,3 +46,11 @@ You have to work on 3 things, don't get scared of, they are quick steps:
 6. `npm run deploy -- --changelog "first deployment!"` to deploy this Plugin.
 7. Once **step 6** is finished, it will show the next steps, you will have to run the command mentioned there (something like `twilio flex:plugins:release ... etc etc`)
 8. We are done! Go to https://flex.twilio.com and make a call to your IVR! Once you accept the call on Flex, you will be able to see the new tab "FORWARD TO IVR"
+
+## How to adapt this plugin to your needs?
+
+1. TODO (but mainly: to go ./src/config.ts and change there... Whatever you change in the config.ts, it needs to be reflected on "backToIVRSplit" widget on Studio)
+
+## How this Plugins works technically
+
+1. TODO (mainly talk about the "redirect" widget on Studio, that opens a session and waits to be called back... and the 2 step processes of the function that does that)
