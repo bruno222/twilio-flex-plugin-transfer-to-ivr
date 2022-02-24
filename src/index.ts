@@ -1,4 +1,4 @@
 import * as FlexPlugin from 'flex-plugin';
-import TwilioFlexForwardToIvrPlugin from './TwilioFlexForwardToIvrPlugin';
+import TwilioFlexTransferToIvrPlugin from './TwilioFlexTransferToIvrPlugin';
 
-FlexPlugin.loadPlugin(TwilioFlexForwardToIvrPlugin);
+FlexPlugin.loadPlugin(TwilioFlexTransferToIvrPlugin);

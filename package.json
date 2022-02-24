@@ -1,6 +1,6 @@
 {
-  "name": "twilio-flex-plugin-forward-to-ivr",
-  "version": "0.0.0",
+  "name": "twilio-flex-plugin-transfer-to-ivr",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "twilio flex:plugins:start",

@@ -1,5 +1,5 @@
 {
-    "description": "Demo Forward to IVR",
+    "description": "Demo Transfer to IVR",
     "states": [
       {
         "name": "Trigger",
@@ -182,7 +182,7 @@
               {
                 "friendly_name": "sales",
                 "arguments": [
-                  "{{widgets.sendToFlex.forwardToIVRMenu}}"
+                  "{{widgets.sendToFlex.transferToIVRMenu}}"
                 ],
                 "type": "equal_to",
                 "value": "sales"
@@ -196,7 +196,7 @@
               {
                 "friendly_name": "services",
                 "arguments": [
-                  "{{widgets.sendToFlex.forwardToIVRMenu}}"
+                  "{{widgets.sendToFlex.transferToIVRMenu}}"
                 ],
                 "type": "equal_to",
                 "value": "services"
@@ -210,7 +210,7 @@
               {
                 "friendly_name": "main",
                 "arguments": [
-                  "{{widgets.sendToFlex.forwardToIVRMenu}}"
+                  "{{widgets.sendToFlex.transferToIVRMenu}}"
                 ],
                 "type": "equal_to",
                 "value": "main"
@@ -219,7 +219,7 @@
           }
         ],
         "properties": {
-          "input": "{{widgets.sendToFlex.forwardToIVRMenu}}",
+          "input": "{{widgets.sendToFlex.transferToIVRMenu}}",
           "offset": {
             "x": 1270,
             "y": 1460

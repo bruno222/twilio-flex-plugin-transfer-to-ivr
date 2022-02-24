@@ -45,7 +45,7 @@ You have to work on 3 things, don't get scared of, they are quick steps:
 5. You need to create a new profile for your Twilio CLI, type `twilio profiles:list` to check if you are using it correctly. If not, add a new profile with the cmd `twilio profiles:add`.
 6. `npm run deploy -- --changelog "first deployment!"` to deploy this Plugin.
 7. Once **step 6** is finished, it will show the next steps, you will have to run the command mentioned there (something like `twilio flex:plugins:release ... etc etc`)
-8. We are done! Go to https://flex.twilio.com and make a call to your IVR! Once you accept the call on Flex, you will be able to see the new tab "FORWARD TO IVR"
+8. We are done! Go to https://flex.twilio.com and make a call to your IVR! Once you accept the call on Flex, you will be able to see the new tab "TRANSFER TO IVR"
 
 ## How to adapt this plugin to your needs?
 

@@ -19,12 +19,12 @@ exports.handler = async (context, event, callback) => {
   console.log('context', context);
 
   const { ACCOUNT_SID, PATH, DOMAIN_NAME } = context;
-  const { CallSid, forwardToIVRMenu } = event;
+  const { CallSid, transferToIVRMenu } = event;
 
   //
   // Request came from Studio Flow to forward the call to Flex
   //
-  if (!forwardToIVRMenu) {
+  if (!transferToIVRMenu) {
     console.log('Step 1 - Sending call to Flex...');
 
     const url = `https://${DOMAIN_NAME}${PATH}`;
@@ -35,7 +35,7 @@ exports.handler = async (context, event, callback) => {
         <?xml version="1.0" encoding="UTF-8"?>
         <Response>
             <Enqueue workflowSid="${taskRouterWorkflow}">
-                <Task>{"forwardToIvrUrl": "${url}"}</Task>
+                <Task>{"transferToIvrUrl": "${url}"}</Task>
             </Enqueue>     
         </Response>
     `
@@ -50,7 +50,7 @@ exports.handler = async (context, event, callback) => {
   const twiml = `
       <?xml version="1.0" encoding="UTF-8"?>
       <Response>
-          <Redirect>https://webhooks.twilio.com/v1/Accounts/${ACCOUNT_SID}/Flows/${studioFlowSid}?FlowEvent=return&amp;forwardToIVRMenu=${forwardToIVRMenu}</Redirect>
+          <Redirect>https://webhooks.twilio.com/v1/Accounts/${ACCOUNT_SID}/Flows/${studioFlowSid}?FlowEvent=return&amp;transferToIVRMenu=${transferToIVRMenu}</Redirect>
       </Response>
   `.trim();
 

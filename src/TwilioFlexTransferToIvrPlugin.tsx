@@ -5,9 +5,9 @@ import { Button, Tab } from '@twilio/flex-ui';
 import { request } from './helper';
 import { buttons } from './config';
 
-const PLUGIN_NAME = 'TwilioFlexForwardToIvrPlugin';
+const PLUGIN_NAME = 'TwilioFlexTransferToIvrPlugin';
 
-export default class TwilioFlexForwardToIvrPlugin extends FlexPlugin {
+export default class TwilioFlexTransferToIvrPlugin extends FlexPlugin {
   constructor() {
     super(PLUGIN_NAME);
   }
@@ -20,7 +20,7 @@ export default class TwilioFlexForwardToIvrPlugin extends FlexPlugin {
    * @param manager { Flex.Manager }
    */
   init(flex: typeof Flex, manager: Flex.Manager) {
-    flex.TaskCanvasTabs.Content.add(<ForwardToIVR key="forward-to-ivr" label="Forward to IVR" uniqueName="forward-to-ivr" />, {
+    flex.TaskCanvasTabs.Content.add(<TransferToIVR key="transfer-to-ivr" label="Transfer to IVR" uniqueName="transfer-to-ivr" />, {
       if: ({ task: { channelType, taskStatus } }: any) => {
         return channelType === 'voice' && taskStatus !== 'wrapping';
       },
@@ -34,25 +34,25 @@ interface Props {
   key: string;
   task?: {
     attributes: {
-      forwardToIvrUrl: string;
+      transferToIvrUrl: string;
       call_sid: string;
     };
   };
 }
-const ForwardToIVR: React.FC<Props> = (props) => {
+const TransferToIVR: React.FC<Props> = (props) => {
   const { task } = props;
 
-  if (!task || !task.attributes || !task.attributes.forwardToIvrUrl) {
-    console.log('@@@ForwardToIVR: Not a Call or the parameters for the "Forward to IVR" are not set.');
+  if (!task || !task.attributes || !task.attributes.transferToIvrUrl) {
+    console.log('@@@TransferToIVR: Not a Call or the parameters for the "Transfer to IVR" are not set.');
     return null;
   }
 
-  const onClick = (forwardToIVRMenu: string) => async () => {
+  const onClick = (transferToIVRMenu: string) => async () => {
     const {
-      attributes: { forwardToIvrUrl, call_sid },
+      attributes: { transferToIvrUrl, call_sid },
     } = task;
 
-    await request(forwardToIvrUrl, { CallSid: call_sid, forwardToIVRMenu });
+    await request(transferToIvrUrl, { CallSid: call_sid, transferToIVRMenu });
   };
 
   const styles: any = {
@@ -70,7 +70,7 @@ const ForwardToIVR: React.FC<Props> = (props) => {
   };
 
   return (
-    <Tab uniqueName="forward-to-ivr" key="forward-to-ivr">
+    <Tab uniqueName="transfer-to-ivr" key="transfer-to-ivr">
       <div style={styles.div}>
         {buttons.map(({ id, name }) => {
           return (
