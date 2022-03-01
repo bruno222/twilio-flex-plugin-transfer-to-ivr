@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Flex from '@twilio/flex-ui';
-import { FlexPlugin } from 'flex-plugin';
+import { FlexPlugin } from '@twilio/flex-plugin';
 import { Button, Tab } from '@twilio/flex-ui';
 import { request } from './helper';
 import { buttons } from './config';
