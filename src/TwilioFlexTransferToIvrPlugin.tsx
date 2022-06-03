@@ -74,7 +74,7 @@ const TransferToIVR: React.FC<Props> = (props) => {
       <div style={styles.div}>
         {buttons.map(({ id, name }) => {
           return (
-            <Button style={styles.button} onClick={onClick(id)}>
+            <Button style={styles.button} onClick={onClick(id)} key={id}>
               {name}
             </Button>
           );
