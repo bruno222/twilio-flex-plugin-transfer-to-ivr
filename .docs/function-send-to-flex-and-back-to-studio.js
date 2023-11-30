@@ -16,7 +16,6 @@ const Response = (callback, xml) => {
 };
 exports.handler = async (context, event, callback) => {
   console.log('event', event);
-  console.log('context', context);
 
   const { ACCOUNT_SID, PATH, DOMAIN_NAME } = context;
   const { CallSid, transferToIVRMenu } = event;
