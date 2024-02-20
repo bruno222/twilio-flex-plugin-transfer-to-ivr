@@ -57,5 +57,5 @@ exports.handler = async (context, event, callback) => {
   console.log('twiml', twiml);
   const client = context.getTwilioClient();
   await client.calls(CallSid).update({ twiml });
-  return Response(callback, 'ok');
+  return Response(callback, twiml);
 };
